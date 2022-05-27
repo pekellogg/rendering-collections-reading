@@ -37,6 +37,8 @@ group :development, :test do
   gem 'capybara'
   gem 'database_cleaner'
   gem 'annotate'
+  gem 'awesome_print'
+  gem 'byebug'
 end
 
 group :development do

@@ -1,3 +1,12 @@
+<h3>Option 1: Ok</h3>
 <% @posts.each do |post| %>
-  <%= render :partial => "post", locals: {:post => post} %>
+  <%= render :partial => "post", locals: {post: post} %><br>
 <% end %>
+
+<h3>Option 2: Better</h3>
+<%= render :partial => "post", collection: @posts %><br>
+
+
+<h3>Option 3: Best</h3>
+<!-- Rails convention assumes partial with collection's name -->
+<%= render(@posts) || "There are no blog posts!" %>
